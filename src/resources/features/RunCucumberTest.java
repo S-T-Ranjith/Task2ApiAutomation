@@ -1,4 +1,4 @@
-package resources.features;
+package src.resources.features;
 
 import io.cucumber.junit.Cucumber;
 import org.junit.runner.RunWith;

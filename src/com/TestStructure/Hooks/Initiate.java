@@ -1,7 +1,10 @@
-package com.TestStructure.Hooks;
+package src.com.TestStructure.Hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import src.com.TestStructure.Actions.ApiAction.*;
+
+import static src.com.TestStructure.Actions.ApiAction.connection;
 
 public class Initiate {
 
@@ -13,7 +16,8 @@ public class Initiate {
 
     @After
     public void tearDown() throws Exception {
-        System.out.println("Api test closed...!");
+        connection.disconnect();
+        System.out.println("TEAR DOWN");
     }
 
 }
